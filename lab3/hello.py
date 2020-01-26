@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-
-#!/usr/bin/env python3
 import cgi
-import cgitb
 import os
+import cgitb
 cgitb.enable()
 
-print("Content-Type: text/html\n")
+print("Content-type: text/html")
 print()
-#print("<!doctype html><title>Hello</title><h2>Hello World</h2>")
-print(os.environ)
+print("<meta charset=\"utf-8\">")
+print("<ul>")
+for key in os.environ.keys():
+    print("<li><span style='color:green'>%30s </span> : %s </li>" % (key,os.environ[key]))
+print("</ul>")

@@ -12,8 +12,10 @@ class FollowingTheTAsInstructionsError(Exception):
         ))
 
 # Delete this line:
-# raise FollowingTheTAsInstructionsError
+#raise FollowingTheTAsInstructionsError
 
 # Edit the following two lines:
-username = "yiyang"
-password = "0217"
+username = "admin"
+password = "admin"
+
+

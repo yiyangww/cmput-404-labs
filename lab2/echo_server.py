@@ -1,12 +1,13 @@
 import socket
 import time
 
-HOST = ""
+HOST = "" # local host
 PORT = 8001
 BUFFER_SIZE = 1024
 
 def main():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        # to make the port reuse
         s. setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.bind((HOST, PORT))
         s.listen(2)

@@ -20,6 +20,7 @@ def main():
         while True:
             conn,addr=proxy_start.accept()
             print("Connect by",addr)
+            # client socket 
             with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as proxy_end:
                 print("Connecting to Google")
                 remote_ip = get_remote_ip(host)
